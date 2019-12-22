@@ -2,9 +2,12 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {}
+index = {"ProdigyDataReader": "00_core.ipynb",
+         "LABELS": "00_core.ipynb",
+         "get_dataloader": "00_core.ipynb",
+         "collate_fn": "00_core.ipynb"}
 
-modules = []
+modules = ["data_preparation.py"]
 
 git_url = "https://github.com/submitCode/PooDetector/tree/master/"
 
