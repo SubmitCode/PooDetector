@@ -2,12 +2,18 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"ProdigyDataReader": "00_core.ipynb",
-         "LABELS": "00_core.ipynb",
-         "get_dataloader": "00_core.ipynb",
-         "collate_fn": "00_core.ipynb"}
+index = {"ProdigyDataReader": "00_data_reader.ipynb",
+         "LABELS": "00_data_reader.ipynb",
+         "Compose": "01_transforms.ipynb",
+         "RandomHorizontalFlip": "01_transforms.ipynb",
+         "ToTensor": "01_transforms.ipynb",
+         "get_transforms": "01_transforms.ipynb",
+         "get_dataloader": "02_data_loader.ipynb",
+         "collate_fn": "02_data_loader.ipynb"}
 
-modules = ["data_preparation.py"]
+modules = ["data_reader.py",
+           "transforms.py",
+           "data_loader.py"]
 
 git_url = "https://github.com/submitCode/PooDetector/tree/master/"
 
