@@ -21,18 +21,18 @@ class ProdigyDataReader(object):
     """
     ProdigyDataReader
     """
-    def __init__(self, root, transforms=None, object_categories=LABELS):
+    def __init__(self, root='.', transforms=None, object_categories=LABELS):
         self.root = pathlib.Path(root)
         self.transforms = transforms
         self.class_names = object_categories
         self.num_classes = len(object_categories)
 
-        if self.root.exists() is False:
-            raise AssertionError()
+        #if self.root.exists() is False:
+        #    raise AssertionError()
 
         self.images = [image for image in self.read_jsonl(str(self.root))]
-        if len(self.images) == 0:
-            raise AssertionError()
+        #if len(self.images) == 0:
+        #    raise AssertionError()
 
     @classmethod
     def read_jsonl(self, file_path):
