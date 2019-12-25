@@ -50,8 +50,20 @@ class ProdigyDataReader(object):
                     continue
 
     @classmethod
+    def read_one_image_from_jsonl(self, file_path, index=0):
+        """
+        this function reads a jsonl file and returns
+        the image at the given function.
+        """
+        count = 0
+        for str_json in self.read_jsonl(file_path):
+            if count == index:
+                return self.stringToRGB(str_json['image'])
+
+
+    @classmethod
     def stringToRGB(self, base64_string):
-        """ convert base64 string to cv2 image """
+        """ convert base64 string to cv2 image"""
         base64_string = base64_string[23:]
         imgdata = base64.b64decode(str(base64_string))
         image = PIL.Image.open(io.BytesIO(imgdata))
