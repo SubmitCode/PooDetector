@@ -2,8 +2,12 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"ProdigyDataReader": "00_data_reader.ipynb",
-         "LABELS": "00_data_reader.ipynb",
+index = {"read_jsonl": "00_dataset.ipynb",
+         "base64ToImage": "00_dataset.ipynb",
+         "get_bbox_coordinates": "00_dataset.ipynb",
+         "get_bbox_from_spans": "00_dataset.ipynb",
+         "ProdigyDataReader": "00_dataset.ipynb",
+         "LABELS": "00_dataset.ipynb",
          "Compose": "01_transforms.ipynb",
          "RandomHorizontalFlip": "01_transforms.ipynb",
          "ToTensor": "01_transforms.ipynb",
@@ -11,7 +15,7 @@ index = {"ProdigyDataReader": "00_data_reader.ipynb",
          "get_dataloader": "02_data_loader.ipynb",
          "collate_fn": "02_data_loader.ipynb"}
 
-modules = ["data_reader.py",
+modules = ["dataset.py",
            "transforms.py",
            "data_loader.py"]
 
