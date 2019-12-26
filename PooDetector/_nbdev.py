@@ -7,17 +7,9 @@ index = {"read_jsonl": "00_dataset.ipynb",
          "get_bbox_coordinates": "00_dataset.ipynb",
          "get_bbox_from_spans": "00_dataset.ipynb",
          "ProdigyDataReader": "00_dataset.ipynb",
-         "LABELS": "00_dataset.ipynb",
-         "Compose": "01_transforms.ipynb",
-         "RandomHorizontalFlip": "01_transforms.ipynb",
-         "ToTensor": "01_transforms.ipynb",
-         "get_transforms": "01_transforms.ipynb",
-         "get_dataloader": "02_data_loader.ipynb",
-         "collate_fn": "02_data_loader.ipynb"}
+         "LABELS": "00_dataset.ipynb"}
 
-modules = ["dataset.py",
-           "transforms.py",
-           "data_loader.py"]
+modules = ["dataset.py"]
 
 git_url = "https://github.com/submitCode/PooDetector/tree/master/"
 
