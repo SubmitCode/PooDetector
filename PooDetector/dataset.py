@@ -64,7 +64,6 @@ def get_bbox_from_spans(height, width, spans):
     bbox = ImageBBox.create(*image.size, bboxes= points, labels=list(range(len(labels))), classes=labels)
     return bbox
 
-
 #Cell
 LABELS = ['FABI', 'FABI_POO', 'FABI_PISS', 'SOPHIE', 'HUMAN']
 
