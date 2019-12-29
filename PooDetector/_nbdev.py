@@ -7,8 +7,7 @@ index = {"read_jsonl": "00_dataset.ipynb",
          "add_padding": "00_dataset.ipynb",
          "span_to_box": "00_dataset.ipynb",
          "jsonl_convert": "00_dataset.ipynb",
-         "get_labels_for_folder": "00_dataset.ipynb",
-         "get_rand_transformed_image": "00_dataset.ipynb"}
+         "get_labels_for_folder": "00_dataset.ipynb"}
 
 modules = ["dataset.py"]
 
