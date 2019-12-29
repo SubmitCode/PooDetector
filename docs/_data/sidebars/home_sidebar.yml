@@ -10,7 +10,7 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: Title
+      title: 'Dataset '
       url: /dataset
     output: web
     title: PooDetector
