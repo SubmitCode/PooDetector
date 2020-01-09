@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: 'Dataset '
       url: /dataset
+    - output: web,pdf
+      title: RetinaNet
+      url: /models.RetinaNet
     output: web
     title: PooDetector
   output: web

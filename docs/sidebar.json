@@ -1,6 +1,7 @@
 {
   "PooDetector": {
     "Overview": "/",
-    "Dataset ": "/dataset"
+    "Dataset ": "/dataset",
+    "RetinaNet": "/models.RetinaNet"
   }
 }
