@@ -12,6 +12,7 @@ import pathlib
 import torch
 import jsonlines
 from torch.utils.data import Dataset, DataLoader
+from torch import nn
 from io import BytesIO
 from fastai.vision import *
 

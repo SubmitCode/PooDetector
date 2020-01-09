@@ -141,3 +141,6 @@ checklink/cookies.txt
 
 # data
 data/*
+
+# ignore notebooks which start with "_"
+_*.ipynb
