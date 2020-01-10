@@ -90,7 +90,6 @@ def jsonl_convert(path:Path, add_pad=True):
 
     return boxes
 
-
 #Cell
 def get_labels_for_folder(folder:Path):
     """reads labels from boxes.json file"""
