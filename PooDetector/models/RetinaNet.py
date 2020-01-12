@@ -7,7 +7,6 @@ __all__ = ['LateralUpsampleMerge', 'RetinaNet', 'create_grid', 'show_anchors', '
            'process_output', 'show_preds', 'show_results', 'get_predictions', 'compute_ap', 'compute_class_AP']
 
 # Cell
-#from fastai.vision import *
 from ..dataset import *
 from fastai.vision import *
 from fastai.vision.models.unet import _get_sfs_idxs, model_sizes, hook_outputs
