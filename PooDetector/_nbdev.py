@@ -7,39 +7,9 @@ index = {"read_jsonl": "00_dataset.ipynb",
          "add_padding": "00_dataset.ipynb",
          "span_to_box": "00_dataset.ipynb",
          "jsonl_convert": "00_dataset.ipynb",
-         "get_labels_for_folder": "00_dataset.ipynb",
-         "LateralUpsampleMerge": "01_models.RetinaNet.ipynb",
-         "RetinaNet": "01_models.RetinaNet.ipynb",
-         "create_grid": "01_models.RetinaNet.ipynb",
-         "show_anchors": "01_models.RetinaNet.ipynb",
-         "create_anchors": "01_models.RetinaNet.ipynb",
-         "get_cmap": "01_models.RetinaNet.ipynb",
-         "draw_outline": "01_models.RetinaNet.ipynb",
-         "draw_rect": "01_models.RetinaNet.ipynb",
-         "draw_text": "01_models.RetinaNet.ipynb",
-         "show_boxes": "01_models.RetinaNet.ipynb",
-         "activ_to_bbox": "01_models.RetinaNet.ipynb",
-         "cthw2tlbr": "01_models.RetinaNet.ipynb",
-         "intersection": "01_models.RetinaNet.ipynb",
-         "IoU_values": "01_models.RetinaNet.ipynb",
-         "match_anchors": "01_models.RetinaNet.ipynb",
-         "tlbr2cthw": "01_models.RetinaNet.ipynb",
-         "bbox_to_activ": "01_models.RetinaNet.ipynb",
-         "encode_class": "01_models.RetinaNet.ipynb",
-         "RetinaNetFocalLoss": "01_models.RetinaNet.ipynb",
-         "SigmaL1SmoothLoss": "01_models.RetinaNet.ipynb",
-         "retina_net_split": "01_models.RetinaNet.ipynb",
-         "unpad": "01_models.RetinaNet.ipynb",
-         "process_output": "01_models.RetinaNet.ipynb",
-         "show_preds": "01_models.RetinaNet.ipynb",
-         "nms": "01_models.RetinaNet.ipynb",
-         "show_results": "01_models.RetinaNet.ipynb",
-         "get_predictions": "01_models.RetinaNet.ipynb",
-         "compute_ap": "01_models.RetinaNet.ipynb",
-         "compute_class_AP": "01_models.RetinaNet.ipynb"}
+         "get_labels_for_folder": "00_dataset.ipynb"}
 
-modules = ["dataset.py",
-           "models/RetinaNet.py"]
+modules = ["dataset.py"]
 
 doc_url = "https://submitCode.github.io/PooDetector/"
 
