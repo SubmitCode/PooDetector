@@ -13,6 +13,8 @@ from fastai.vision.models.unet import _get_sfs_idxs, model_sizes, hook_outputs
 import matplotlib.cm as cmx
 import matplotlib.colors as mcolors
 from cycler import cycler
+from fastprogress.fastprogress import master_bar, progress_bar
+import os.path
 
 # Cell
 class LateralUpsampleMerge(nn.Module):
