@@ -55,7 +55,7 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
-*.cover
+.cover
 .hypothesis/
 
 # Translations
@@ -140,7 +140,7 @@ checklink/cookies.txt
 .gitconfig
 
 # data
-data/*
+#data/*
 
 # ignore notebooks which start with "_"
 _*.ipynb

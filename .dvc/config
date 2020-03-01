@@ -1,0 +1,4 @@
+['remote "default"']
+url = /mnt/Data/binaryHorsePooClassification/
+[core]
+remote = default
