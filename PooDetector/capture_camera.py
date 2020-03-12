@@ -58,7 +58,8 @@ def capture(
     time_start:Param('time when recording starts', str)='8:00',
     time_stop:Param('time when recording stops', str)='17:00',
     file_log:Param('Path to where the log files will be stored', str)='/mnt/Data/capture_log',
-    path_env_file:Param('Path where we can find the .env file', str)='..'):
+    path_env_file:Param('Path where we can find the .env file', str)='..',
+    sleep_time:Param('seconds to sleep between captures', float)=0.25):
 
 
     env_path = Path(path_env_file) / '.env'
@@ -113,8 +114,10 @@ def capture(
                 cv2.imwrite(str(fld_save_to / (now_str + '.jpg')), pic)
                 prev_date = datetime.today().date() #assign new date to compare to
 
+                time.sleep(sleep_time)
+
         except Exception as e:
-            logger.error(e)
+            logger.error(sleep_time)
 
         finally:
             cap.release()

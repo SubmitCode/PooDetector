@@ -2,17 +2,47 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"fastai_recipe": "01_custom_receipe.ipynb",
-         "create_folders": "01_custom_receipe.ipynb",
-         "load_fastai_model": "01_custom_receipe.ipynb",
+index = {"create_folders": "01_custom_receipe.ipynb",
          "save_base64_image": "01_custom_receipe.ipynb",
+         "extract_jsonl_to_binary_folders": "00_dataset_operations.ipynb",
+         "fastai_recipe": "01_custom_receipe.ipynb",
+         "load_fastai_model": "01_custom_receipe.ipynb",
          "score_stream": "01_custom_receipe.ipynb",
+         "predict_folder": "01_custom_receipe.ipynb",
+         "predict_all_subfolders": "01_custom_receipe.ipynb",
+         "fastai_jsonl_recipe": "01_custom_receipe.ipynb",
          "create_logger": "02_capture_camera.ipynb",
-         "create_folder": "02_capture_camera.ipynb",
-         "capture": "02_capture_camera.ipynb"}
+         "create_folder": "04_Feeder_Ops.ipynb",
+         "capture": "02_capture_camera.ipynb",
+         "prepare_data": "03_binaryHorsePoo.ipynb",
+         "get_learner": "03_binaryHorsePoo.ipynb",
+         "train_model": "03_binaryHorsePoo.ipynb",
+         "CAP_URL": "04_Feeder_Ops.ipynb",
+         "PATH_SAVE_FILES": "04_Feeder_Ops.ipynb",
+         "PATH_FILE_LOG": "04_Feeder_Ops.ipynb",
+         "SLEEP_TIME_BETWEEN_CAPTURE": "04_Feeder_Ops.ipynb",
+         "ACTIVATE_PREDICTION": "04_Feeder_Ops.ipynb",
+         "SLEEP_BETWEEN_FEEDING": "04_Feeder_Ops.ipynb",
+         "PREDICTION_THRES": "04_Feeder_Ops.ipynb",
+         "MAX_FEEDING_SESSIONS_PER_DAY": "04_Feeder_Ops.ipynb",
+         "ACTIVATE_FEEDER": "04_Feeder_Ops.ipynb",
+         "PATH_MODEL": "04_Feeder_Ops.ipynb",
+         "PATH_FOLDER_SUCCESSFUL_PREDICTIONS": "04_Feeder_Ops.ipynb",
+         "FEEDER_URL": "04_Feeder_Ops.ipynb",
+         "FEEDER_USER": "04_Feeder_Ops.ipynb",
+         "FEEDER_PWD": "04_Feeder_Ops.ipynb",
+         "FEEDER_CMD": "04_Feeder_Ops.ipynb",
+         "get_logger": "04_Feeder_Ops.ipynb",
+         "get_sunrise": "04_Feeder_Ops.ipynb",
+         "get_sunset": "04_Feeder_Ops.ipynb",
+         "cap_and_predict": "04_Feeder_Ops.ipynb",
+         "run_feeder": "04_Feeder_Ops.ipynb"}
 
-modules = ["custom_recipe.py",
-           "capture_camera.py"]
+modules = ["dataset_operations.py",
+           "custom_recipe.py",
+           "capture_camera.py",
+           "models/binaryClassification.py",
+           "feeder_ops.py"]
 
 doc_url = "https://submitCode.github.io/PooDetector/"
 
