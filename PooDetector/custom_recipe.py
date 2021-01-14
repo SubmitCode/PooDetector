@@ -28,8 +28,7 @@ import prodigy
 
 from fastai.vision import *
 from pathlib import Path
-
-import fire
+from fastscript import *
 
 # Cell
 @recipe(
@@ -167,9 +166,18 @@ def predict_folder(image_folder:[str, Path], path_model:[str, Path]=Path('data/e
     return learn, preds, y, jsonl_list
 
 # Cell
-def predict_all_subfolders(path:[str, Path]='data', skipXmostRecent=1, path_model='data/export.pkl'):
+@call_parse
+def predict_all_subfolders(path:Param("path of parent folder", str)='data',
+                           skipXmostRecent:Param("skips the nth most recent folders", int)=1,
+                           path_model:Param("path to the model to use", str)='data/export.pkl',
+                           predict_single_folder:Param("path to single folder", str)=None):
     """predicts all images in subfolders of the given path an creates a tasks.jsonl file"""
     path = Path(path)
+
+    if predict_single_folder is not None:
+        predict_folder(Path(predict_single_folder), path_model)
+        return
+
     subfolders = sorted(next(os.walk(str(path)))[1], reverse=True)
 
     subfolders = [path / folder for folder in subfolders]
@@ -212,11 +220,3 @@ def fastai_jsonl_recipe(dataset, path_image_folder, path_model, predict=0):
         }
 
     }
-
-
-# Cell
-if __name__ == '__main__':
-  fire.Fire({
-      'predict_folder': predict_folder,
-      'predict_all_subfolders': predict_all_subfolders
-  })

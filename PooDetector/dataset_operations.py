@@ -9,6 +9,7 @@ from pathlib import Path
 import PIL.Image
 import fire
 import io
+#from fastscript import *
 
 # Cell
 def create_folders(path:str, label:str) -> None:
@@ -33,6 +34,7 @@ def extract_jsonl_to_binary_folders(
         positive_label:str='horse_poo'
     ):
     """this function extracts pictures to folders based on the answer key"""
+    print(path)
     path = Path(path) #convert to pathlib
     stream = get_stream(str(path))
     create_folders(str(path.parent), positive_label)
@@ -45,10 +47,3 @@ def extract_jsonl_to_binary_folders(
             #print(f"{str(path.parent / ('no_' + positive_label)), task['text'] + '.jpg'}")
             save_base64_image(str(path.parent / ('no_' + positive_label)), task['text'] + '.jpg', task['image'])
 
-
-
-# Cell
-if __name__ == '__main__':
-  fire.Fire({
-      'extract_jsonl_to_binary_folders': extract_jsonl_to_binary_folders
-  })
