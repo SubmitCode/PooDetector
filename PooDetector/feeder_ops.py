@@ -183,7 +183,9 @@ def write_to_influx(path:Path, accuracy, write_api):
     """write datapoint to influx"""
     if INFLUX_BUCKET is not None:
         point = Point("ai")\
-            .tag("filename", path.name).field("accuracy", accuracy)\
+            .tag("filename", path.name)\
+            .tag("path", str(path))\
+            .field("accuracy", float(accuracy))\
             .time(datetime.utcnow(), WritePrecision.NS)
         write_api.write(INFLUX_BUCKET, INFLUX_ORG, point)
 
@@ -257,7 +259,7 @@ def cap_and_predict():
                     folder =  Path(PATH_FOLDER_SUCCESSFUL_PREDICTIONS) / current_date.strftime('%Y%m%d')
 
                     #influx
-                    write_to_influx(path_save_file, float(prediction), write_api)
+                    write_to_influx(path_save_file, prediction, write_api)
 
 
                     if prediction >= PREDICTION_THRES:
@@ -265,7 +267,7 @@ def cap_and_predict():
                         folder = create_folder(Path(PATH_FOLDER_SUCCESSFUL_PREDICTIONS),
                                                current_date.strftime('%Y%m%d'))
                         img.save(folder / path_save_file.name) #save also  in a special folder
-                    elif last_cap_time >= datetime.now():
+                    elif last_cap_time >= datetime.now() or float(prediction) < 0.1:
                         path_save_file.unlink()
                     else:
                         last_cap_time = datetime.now() + timedelta(seconds=SLEEP_TIME_BETWEEN_CAPTURE)

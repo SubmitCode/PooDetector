@@ -145,3 +145,4 @@ checklink/cookies.txt
 # ignore notebooks which start with "_"
 _*.ipynb
 /data
+PooDetector/feeder_ops.py
