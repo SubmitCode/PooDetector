@@ -10,11 +10,23 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: 'Dataset '
-      url: /dataset
+      title: 'Dataset Operations '
+      url: dataset_operations.html
     - output: web,pdf
-      title: RetinaNet
-      url: /models.RetinaNet
+      title: Prodigy Recipe
+      url: custom_receipe.html
+    - output: web,pdf
+      title: Capture Camera
+      url: capture_camera.html
+    - output: web,pdf
+      title: Binary Horse Poo Model
+      url: binaryHorsePoo.html
+    - output: web,pdf
+      title: Feeder Ops
+      url: feeder_ops.html
+    - output: web,pdf
+      title: Preview Folder
+      url: preview_folder.html
     output: web
     title: PooDetector
   output: web

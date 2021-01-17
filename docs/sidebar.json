@@ -1,7 +1,11 @@
 {
   "PooDetector": {
     "Overview": "/",
-    "Dataset ": "/dataset",
-    "RetinaNet": "/models.RetinaNet"
+    "Dataset Operations ": "dataset_operations.html",
+    "Prodigy Recipe": "custom_receipe.html",
+    "Capture Camera": "capture_camera.html",
+    "Binary Horse Poo Model": "binaryHorsePoo.html",
+    "Feeder Ops": "feeder_ops.html",
+    "Preview Folder": "preview_folder.html"
   }
 }

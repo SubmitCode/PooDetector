@@ -15,6 +15,7 @@ import PIL
 from time import time
 import json
 from pathlib import Path
+from dotenv import load_dotenv
 
 from prodigy.components.loaders import get_stream, JSONL
 from prodigy.components.preprocess import fetch_images
@@ -29,6 +30,10 @@ import prodigy
 from fastai.vision import *
 from pathlib import Path
 from fastscript import *
+
+from datetime import datetime
+from influxdb_client import InfluxDBClient, Point, WritePrecision
+from influxdb_client.client.write_api import SYNCHRONOUS
 
 # Cell
 @recipe(

@@ -1,11 +1,14 @@
 ---
 
-title: Title
+title: Prodigy Recipe
+
 
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "summary"
+
+
+nb_path: "nbs/01_custom_receipe.ipynb"
 ---
 <!--
 
@@ -18,34 +21,55 @@ summary: "summary"
 -->
 
 <div class="container" id="notebook-container">
+        
+    {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Prodigy-Recipe">Prodigy Recipe<a class="anchor-link" href="#Prodigy-Recipe">&#182;</a></h1>
+<h2 id="Imports">Imports<a class="anchor-link" href="#Imports"> </a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Imports">Imports<a class="anchor-link" href="#Imports">&#182;</a></h2>
-</div>
-</div>
-</div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="fastaimodel-recipe">fastaimodel recipe<a class="anchor-link" href="#fastaimodel-recipe">&#182;</a></h2>
-</div>
-</div>
-</div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">INFLUX_TOKEN</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;INFLUX_TOKEN&#39;</span><span class="p">)</span>
+<span class="n">INFLUX_ORG</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;INFLUX_ORG&#39;</span><span class="p">)</span>
+<span class="n">INFLUX_BUCKET</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;INFLUX_BUCKET&#39;</span><span class="p">)</span>
+<span class="n">INFLUX_URL</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;INFLUX_URL&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 </div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="fastaimodel-recipe">fastaimodel recipe<a class="anchor-link" href="#fastaimodel-recipe"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -67,9 +91,17 @@ summary: "summary"
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -91,13 +123,23 @@ summary: "summary"
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check if folder do not exist</span>
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;horse_poo&#39;</span><span class="p">):</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;horse_poo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rmdir</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;horse_poo&#39;</span><span class="p">):</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;horse_poo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rmdir</span><span class="p">()</span>
 <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;no_horse_poo&#39;</span><span class="p">):</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;no_horse_poo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rmdir</span><span class="p">()</span>
 <span class="n">create_folders</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;horse_poo&#39;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;horse_poo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">True</span>
@@ -109,9 +151,10 @@ summary: "summary"
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+    {% endraw %}
 
-</div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -133,6 +176,17 @@ summary: "summary"
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -158,9 +212,10 @@ summary: "summary"
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+    {% endraw %}
 
-</div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -182,9 +237,17 @@ summary: "summary"
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -205,15 +268,23 @@ summary: "summary"
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="fastai_jsonl_recipe">fastai_jsonl_recipe<a class="anchor-link" href="#fastai_jsonl_recipe">&#182;</a></h2>
-</div>
-</div>
-</div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="fastai_jsonl_recipe">fastai_jsonl_recipe<a class="anchor-link" href="#fastai_jsonl_recipe"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -223,7 +294,7 @@ summary: "summary"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="predict_folder" class="doc_header"><code>predict_folder</code><a href="https://github.com/submitCode/PooDetector/tree/master/PooDetector/custom_recipe.py#L148" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>predict_folder</code>(<strong><code>image_folder</code></strong>:<code>Path'&gt;]</code>, <strong><code>path_model</code></strong>:<code>Path'&gt;]</code>=<em><code>PosixPath('data/export.pkl')</code></em>)</p>
+<h4 id="predict_folder" class="doc_header"><code>predict_folder</code><a href="https://github.com/submitCode/PooDetector/tree/master/PooDetector/custom_recipe.py#L148" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>predict_folder</code>(<strong><code>image_folder</code></strong>:<code>Path'&gt;]</code>, <strong><code>path_model</code></strong>:<code>Path'&gt;]</code>=<em><code>Path('data/export.pkl')</code></em>)</p>
 </blockquote>
 <p>predicts a folder of images and saves images in tasks.jsonl</p>
 
@@ -235,6 +306,17 @@ summary: "summary"
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -249,9 +331,10 @@ summary: "summary"
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+    {% endraw %}
 
-</div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -261,7 +344,7 @@ summary: "summary"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="predict_all_subfolders" class="doc_header"><code>predict_all_subfolders</code><a href="https://github.com/submitCode/PooDetector/tree/master/PooDetector/custom_recipe.py#L169" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>predict_all_subfolders</code>(<strong><code>path</code></strong>:"path of parent folder"=<em><code>'data'</code></em>, <strong><code>skipXmostRecent</code></strong>:"skips the nth most recent folders"=<em><code>1</code></em>, <strong><code>path_model</code></strong>:"path to the model to use"=<em><code>'data/export.pkl'</code></em>, <strong><code>predict_single_folder</code></strong>:"path to single folder"=<em><code>None</code></em>)</p>
+<h4 id="predict_all_subfolders" class="doc_header"><code>predict_all_subfolders</code><a href="https://github.com/submitCode/PooDetector/tree/master/PooDetector/custom_recipe.py#L169" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>predict_all_subfolders</code>(<strong><code>path</code></strong>:<code>Param object at 0x7f95d50feb10&gt;</code>=<em><code>'data'</code></em>, <strong><code>skipXmostRecent</code></strong>:<code>Param object at 0x7f95e247e490&gt;</code>=<em><code>1</code></em>, <strong><code>path_model</code></strong>:<code>Param object at 0x7f95c8343f50&gt;</code>=<em><code>'data/export.pkl'</code></em>, <strong><code>predict_single_folder</code></strong>:<code>Param object at 0x7f95c8343bd0&gt;</code>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>predicts all images in subfolders of the given path an creates a tasks.jsonl file</p>
 
@@ -273,9 +356,17 @@ summary: "summary"
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -297,6 +388,17 @@ summary: "summary"
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -315,6 +417,10 @@ summary: "summary"
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -328,16 +434,34 @@ summary: "summary"
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Converted 01_custom_receipe.ipynb.
+</pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>prodigy fastai_jsonl_recipe binary_horse_poo <span class="err">\</span>
-<span class="o">-</span><span class="n">path_image_folder</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">Data</span><span class="o">/</span><span class="n">to_label</span><span class="o">/</span><span class="nb">all</span><span class="o">/</span> \
+<span class="o">-</span><span class="n">path_image_folder</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">Data</span><span class="o">/</span><span class="n">to_label</span><span class="o">/</span><span class="mi">20210107</span><span class="o">/</span> \
 <span class="o">-</span><span class="n">path_model</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">wilhelm</span><span class="o">/</span><span class="n">PooDetector</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">export</span><span class="o">.</span><span class="n">pkl</span> \
-<span class="o">-</span><span class="n">predict</span> <span class="mi">0</span> \
+<span class="o">-</span><span class="n">predict</span> <span class="mi">0</span><span class="n">co</span> \
 <span class="o">-</span><span class="n">F</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">wilhelm</span><span class="o">/</span><span class="n">PooDetector</span><span class="o">/</span><span class="n">PooDetector</span><span class="o">/</span><span class="n">custom_recipe</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 
@@ -363,6 +487,10 @@ Open the app in your browser and start annotating!
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -378,12 +506,57 @@ Open the app in your browser and start annotating!
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>python PooDetector/custom_recipe.py -h
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_to_label_jsonl</span><span class="p">(</span><span class="n">path_target</span><span class="p">:[</span><span class="nb">str</span><span class="p">,</span><span class="n">Path</span><span class="p">]</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;tasks.jsonl&#39;</span><span class="p">),</span> <span class="n">flux_query</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;creates a jsonl file for the predictions selcted by the flux query&quot;&quot;&quot;</span>
+    
+    <span class="k">if</span> <span class="n">flux_query</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">flux_query</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">            from(bucket: &quot;poo_detector&quot;)</span>
+<span class="s1">            |&gt; range(start: -48h)</span>
+<span class="s1">            |&gt; filter(fn: (r) =&gt; r[&quot;_measurement&quot;] == &quot;ai&quot;)</span>
+<span class="s1">            |&gt; filter(fn: (r) =&gt; r[&quot;_value&quot;] &gt;= 0.3)            </span>
+<span class="s1">            &#39;&#39;&#39;</span>
+
+    <span class="n">client</span> <span class="o">=</span> <span class="n">InfluxDBClient</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">INFLUX_URL</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="n">INFLUX_TOKEN</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query_api</span><span class="p">()</span><span class="o">.</span><span class="n">query_data_frame</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="n">org</span><span class="p">)</span>
+
+    <span class="n">filenames</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">filename</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+    <span class="n">paths</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">_value</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+
+    <span class="n">jsonl_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">score</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">filename</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">filenames</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">path</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="mi">3</span><span class="p">))}</span>
+        <span class="n">jsonl_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;save results to {str(path_target)}&quot;</span><span class="p">)</span>
+    <span class="n">write_jsonl</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path_target</span><span class="p">),</span> <span class="n">jsonl_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">create_to_label_jsonl</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -396,22 +569,7 @@ Open the app in your browser and start annotating!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>usage: custom_recipe.py [-h] [--path PATH] [--skipXmostRecent SKIPXMOSTRECENT]
-                        [--path_model PATH_MODEL]
-                        [--predict_single_folder PREDICT_SINGLE_FOLDER]
-
-predicts all images in subfolders of the given path an creates a tasks.jsonl
-file
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --path PATH           path of parent folder
-  --skipXmostRecent SKIPXMOSTRECENT
-                        skips the nth most recent folders
-  --path_model PATH_MODEL
-                        path to the model to use
-  --predict_single_folder PREDICT_SINGLE_FOLDER
-                        path to single folder
+<pre>save results to tasks.jsonl
 </pre>
 </div>
 </div>
@@ -420,6 +578,49 @@ optional arguments:
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>prodigy image.manual binary_horse_poo ./tasks.jsonl --loader jsonl --label horse_poo
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Using 1 label(s): horse_poo
+
+✨  Starting the web server at http://0.0.0.0:9010 ...
+Open the app in your browser and start annotating!
+
+^C
+
+<span class="ansi-green-fg">✔ Saved 633 annotations to database SQLite</span>
+Dataset: binary_horse_poo
+Session ID: 2021-01-16_20-20-56
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 

@@ -33,25 +33,27 @@ index = {"create_folders": "01_custom_receipe.ipynb",
          "FEEDER_USER": "04_feeder_ops.ipynb",
          "FEEDER_PWD": "04_feeder_ops.ipynb",
          "FEEDER_CMD": "04_feeder_ops.ipynb",
+         "INFLUX_TOKEN": "04_feeder_ops.ipynb",
+         "INFLUX_ORG": "04_feeder_ops.ipynb",
+         "INFLUX_BUCKET": "04_feeder_ops.ipynb",
+         "INFLUX_URL": "04_feeder_ops.ipynb",
          "TlsSMTPHandler": "04_feeder_ops.ipynb",
          "get_logger": "04_feeder_ops.ipynb",
          "get_sunrise": "04_feeder_ops.ipynb",
          "get_sunset": "04_feeder_ops.ipynb",
          "send_mail_with_pic": "04_feeder_ops.ipynb",
          "run_feeder": "04_feeder_ops.ipynb",
-         "cap_and_predict": "04_feeder_ops.ipynb",
-         "INFLUX_TOKEN": "04_feeder_ops.ipynb",
-         "INFLUX_ORG": "04_feeder_ops.ipynb",
-         "INFLUX_BUCKET": "04_feeder_ops.ipynb",
-         "INFLUX_URL": "04_feeder_ops.ipynb",
          "get_influx_api": "04_feeder_ops.ipynb",
-         "write_to_influx": "04_feeder_ops.ipynb"}
+         "write_to_influx": "04_feeder_ops.ipynb",
+         "cap_and_predict": "04_feeder_ops.ipynb",
+         "convert_path_timestamp": "05_preview_folder.ipynb"}
 
 modules = ["dataset_operations.py",
            "custom_recipe.py",
            "capture_camera.py",
            "models/binaryClassification.py",
-           "feeder_ops.py"]
+           "feeder_ops.py",
+           "preview_folder.py"]
 
 doc_url = "https://submitCode.github.io/PooDetector/"
 
