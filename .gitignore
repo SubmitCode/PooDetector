@@ -146,3 +146,5 @@ checklink/cookies.txt
 _*.ipynb
 /data
 PooDetector/feeder_ops.py
+test_data/export.pkl
+test_data/models/stage1.pth
