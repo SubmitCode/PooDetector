@@ -1,7 +1,7 @@
 # Welcome to PooDetector
 > Use AI to detect horse poo.
 
-
+https://github.com/SubmitCode/PooDetector/CI/badge.svg
 The goal of this library is to operationalize the HorsePooDetector. Read more about this [here](https://www.linkedin.com/pulse/real-world-ai-finding-horse-poo-wilhelm-fritsche-cfa-cqf-pmp/)
 
 ## getting started
