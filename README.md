@@ -1,4 +1,5 @@
-![CI](https://github.com/SubmitCode/PooDetector/CI/badge.svg)
+![](https://github.com/SubmitCode/PooDetector/workflows/CI/badge.svg)
+
 
 # Welcome to PooDetector
 > Use AI to detect horse poo.
