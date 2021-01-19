@@ -46,7 +46,8 @@ index = {"create_folders": "01_custom_receipe.ipynb",
          "get_influx_api": "04_feeder_ops.ipynb",
          "write_to_influx": "04_feeder_ops.ipynb",
          "cap_and_predict": "04_feeder_ops.ipynb",
-         "convert_path_timestamp": "05_preview_folder.ipynb"}
+         "convert_path_timestamp": "05_preview_folder.ipynb",
+         "create_datehour_folders": "05_preview_folder.ipynb"}
 
 modules = ["dataset_operations.py",
            "custom_recipe.py",
